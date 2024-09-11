@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-       sh 'echo passed'
+       sh 'cd /var/lib/jenkins/workspace'
+       sh 'sudo rm -rf *'
       }
     }
     stage('Build and Test') {
