@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('Clean') {
       steps {
-        cleanWs()
+        def dirToClean = 'java-maven-sonar-argocd-helm-k8s/spring-boot-app'
+        sh "rm -rf ${dirToClean}/*"
+        sh "ls -ltr ${dirToClean}"
       }
     }
     stage('Build and Test') {
