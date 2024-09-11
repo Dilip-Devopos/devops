@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
        sh 'cd /var/lib/jenkins/workspace'
-       sh 'sudo rm -rf *'
+       sh 'rm -rf *'
       }
     }
     stage('Build and Test') {
