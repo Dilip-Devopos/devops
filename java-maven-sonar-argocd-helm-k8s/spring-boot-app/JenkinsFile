@@ -6,13 +6,9 @@ pipeline {
     }
   }
   stages {
-    stage('Clean') {
+    stage('Checkout') {
       steps {
-       script{
-        def dirToClean = 'java-maven-sonar-argocd-helm-k8s/spring-boot-app'
-        sh "rm -rf ${dirToClean}/*"
-        sh "ls -ltr ${dirToClean}"
-       }
+       sh 'echo passed'
       }
     }
     stage('Build and Test') {
