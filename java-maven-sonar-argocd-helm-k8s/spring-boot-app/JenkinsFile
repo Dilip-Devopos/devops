@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-       sh 'cd /var/lib/jenkins/workspace && deleteDir()'
+       sh 'cd /var/lib/jenkins/workspace && rm -rf *'
       }
     }
     stage('Build and Test') {
