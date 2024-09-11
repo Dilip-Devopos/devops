@@ -6,10 +6,9 @@ pipeline {
     }
   }
   stages {
-    stage('Checkout') {
+    stage('Clean') {
       steps {
-        sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/Dilip-Devopos/devops.git'
+        cleanWs()
       }
     }
     stage('Build and Test') {
